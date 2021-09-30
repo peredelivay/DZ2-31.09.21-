@@ -1,0 +1,52 @@
+#include <iostream>
+#include <math.h>
+#include <windows.h>
+
+using namespace std;
+
+void main() {
+	setlocale (0, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	double x, y, b;
+	cout << "Подставить значение переменных x, y и b в функцию (z = ln(b-y)*sqrt(b-x): \n";
+	cout << "Введите значение переменной x: ";
+	void proverka(double& x); {
+		while (!(cin >> x) || cin.get() != '\n') {
+			cout << "Введите числовое значение переменной x: \n";
+			cin.clear();
+			cin.ignore(32767, '\n');
+		}
+	}
+	cout << "Введите значение переменной y: ";
+	void proverka(double& y); {
+		while (!(cin >> y) || cin.get() != '\n') {
+			cout << "Введите числовое значение переменной y: \n";
+			cin.clear();
+			cin.ignore(32767, '\n');
+		}
+	}
+	cout << "Введите значение переменной b";
+	void proverka(double& b); {
+		while (!(cin >> b) || cin.get() != '\n') {
+			cout << "Введите числовое значение переменной b: \n";
+			cin.clear();
+			cin.ignore(32767, '\n');
+		}
+	}
+	if (x == b) {
+		cout << "z = 0";
+	}
+	else if (x > b) {
+		cout << "Нет решения (Нельзя выводить корень из отрицательного числа)" << endl;
+	}
+	else if (y > b) {
+		cout << "Нет решений (Нельзя найти логарифм от отрицательного числа" << endl;
+	}
+	else if (b - y == 1) {
+		cout << "z = 0" << endl;
+	}
+	else {
+		cout << "z =" << log(b - y) * sqrt(b - x) << endl;
+	}
+}
