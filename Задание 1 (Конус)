@@ -1,0 +1,71 @@
+#include <iostream>
+#include <math.h>
+#include <Windows.h>
+
+using namespace std;
+
+void main() {
+	setlocale(0, "Russian");
+	double R, r, Pi, h, l;
+	Pi = 3, 14;
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	while (true) {
+		cout << "Вычислить объем и полную поверхность усеченного конуса:" << endl;
+		cout << "Введите значение R (Радиус основания конуса):" << endl;
+		void proverka(double& R); {
+			while (!(cin >> R) || cin.get() != '\n') {
+				cout << "Введи числовое значение радиуса основания R: ";
+				cin.clear();
+				cin.ignore(32767, '\n');
+			}
+		}
+		if (R < 0) {
+			cout << "Введите значение радиуса основания больше или равное 0: \n";
+		}
+		else {
+			cout << "Введите значение r (Радиус усеченной поверхности: )\n";
+			void proverka(double& r); {
+				while (!(cin >> r) || cin.get() != '\n')
+				{
+					cout << "Введите значение радиуса усеченной поверхности конуса r: ";
+					cin.clear();
+					cin.ignore(32767, '\n');
+				}
+			}
+			if (r < 0) {
+				cout << "Введите значение радиуса усеченной поверхности конуса больше или равное 0: \n";
+			}
+			else {
+				cout << "Введите значение h (Высоты конуса):" << endl;
+				void proverka(double& h); {
+					while (!(cin >> h) || cin.get() != '\n') {
+						cout << "Введите высоту конуса h: ";
+						cin.clear();
+						cin.ignore(32767, '\n');
+					}
+				}
+				if (h <= 0) {
+					cout << "Введите корректную высоту (больше нуля): \n";
+				}
+				else {
+					cout << "Введите значение l (Апофемы):" << endl;
+					void proverka(double& l); {
+						while (!(cin >> l) || cin.get() != '\n') {
+							cout << "Введите значение апофемы l: ";
+							cin.clear();
+							cin.ignore(32767, '\n');
+						}
+					}
+					if (l <= 0) {
+						cout << "Введите корректное значение апофемы l: \n";
+					}
+					else {
+						cout << "V (Объем) = " << (Pi * h * (R * R + R * r + r * r)) / 3 << endl;
+						cout << "S (Площадь полной поверхности) = " << Pi * (R * R + (R + l) * l + r * r) << endl;
+					}
+				}
+			}
+		}
+	}
+}
