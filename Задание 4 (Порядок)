@@ -1,0 +1,28 @@
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+
+void proverka(int& a1) {
+	while (!(cin >> a1) || cin.get() != '\n'){
+		cout << "Введите целое числовое значение: " << endl;
+		cin.clear();
+		cin.ignore(97529347, '\n');
+	}
+}
+
+void main() {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int n;
+	while (true) {
+		cout << "Введите значение n:\n";
+		proverka(n);
+		if (n <= 0) {
+			continue;
+		}
+		for (int poryadok = 0; poryadok < 10; poryadok+=1) {
+			cout << '\t' << n + poryadok << endl;
+		}
+	}
+}
