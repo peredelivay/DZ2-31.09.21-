@@ -1,0 +1,20 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+int main()
+{
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    for (double x = -4; x <= 4; x += 0.5)
+    {
+        if (x == 1)
+        {
+            cout << "При x = 1 \t => \t" << "Нет решений" << endl;
+        }
+        else
+        {
+            cout << "При x = " << x << "\t => \t" << " y = " << (x * x - 2 * x + 2) / (x - 1) << endl;
+        }
+    }
+}
