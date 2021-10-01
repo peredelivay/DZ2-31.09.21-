@@ -52,7 +52,7 @@ void main() {
 					cout << "Введите значение l (Апофемы):" << endl;
 					void proverka(double& l); {
 						while (!(cin >> l) || cin.get() != '\n') {
-							cout << "Введите значение апофемы l: ";
+							cout << "Введите значение апофемы l: ";  //ПОФИКСИТЬ АПОФЕМУ ЧЕРЕЗ R2 + h2
 							cin.clear();
 							cin.ignore(32767, '\n');
 						}
