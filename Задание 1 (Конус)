@@ -6,7 +6,7 @@ using namespace std;
 
 void main() {
 	setlocale(0, "Russian");
-	double R, r, Pi, h, l;
+	double R, r, Pi, h;
 	Pi = 3, 14;
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
